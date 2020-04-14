@@ -1,0 +1,25 @@
+{
+  "name": "self-react-ui-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hoan Nguyen <nguyenvanhoan02@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.3"
+  }
+}
