@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -11,6 +10,9 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  output: {
+    filename: '[name].bundle.js',
+  },
   entry: {
     app: './src/index.js',
   },
@@ -20,6 +22,16 @@ module.exports = {
         test: /\.html$/,
         use: {
           loader: 'html-loader',
+        },
+      },
+      {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread'],
+          },
         },
       },
     ],

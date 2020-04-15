@@ -1,9 +1,4 @@
 {
   "extends": ["plugin:prettier/recommended"],
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    }
-  }
+  "parser": "babel-eslint"
 }
