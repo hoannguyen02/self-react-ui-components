@@ -8,8 +8,13 @@
     "start": "webpack-dev-server --open --config webpack.config.js "
   },
   "dependencies": {
+    "css-loader": "^3.5.3",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^1.0.0",
+    "style-loader": "^1.2.1"
   },
   "husky": {
     "hooks": {

@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  devtool: 'source-map',
   mode: 'development',
   plugins: [
     new CleanWebpackPlugin(),
@@ -25,6 +26,17 @@ module.exports = {
         },
       },
       {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+      {
         test: /\.(js|jsx)$/,
         use: {
           loader: 'babel-loader',
@@ -33,6 +45,11 @@ module.exports = {
             plugins: ['@babel/plugin-proposal-object-rest-spread'],
           },
         },
+      },
+      {
+        test: /\.(js|jsx|scss)$/,
+        use: ['source-map-loader'],
+        enforce: 'pre',
       },
     ],
   },
