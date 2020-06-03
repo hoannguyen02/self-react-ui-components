@@ -12,7 +12,8 @@ const Select = (props) => {
     <div className="select-root">
       {label && <label>{label}</label>}
       <select onChange={handleChange}>
-        {Array.isArray(options) &&
+        {options &&
+          Array.isArray(options) &&
           options.map((item) =>
             typeof item === 'string' ? (
               <option key={item}>{item}</option>
