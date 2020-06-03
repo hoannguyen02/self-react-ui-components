@@ -1,10 +1,8 @@
-button.primary {
-  color: #fafafa;
+button.default {
   font-weight: 700;
   font-size: 16px;
   margin: 0;
   width: auto;
-  border: 1px solid #2b72cb;
   height: 42px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -12,8 +10,22 @@ button.primary {
   padding: 0 12px;
   border-radius: 3px;
   font-size: 19px;
-  background-color: #2d89d1;
   outline: none;
   max-width: 100%;
   user-select: none;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #e0e0e0;
+  border: 1px solid #e0e0e0;
+}
+
+button.primary {
+  color: #fafafa;
+  border: 1px solid #2b72cb;
+  background-color: #2d89d1;
+}
+
+button.secondary {
+  color: rgba(0, 0, 0, 0.87);
+  border: 1px solid #f48fb1;
+  background-color: #f48fb1;
 }
