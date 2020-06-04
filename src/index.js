@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ModalExample from './examples/ModalExample';
 import SelectExample from './examples/SelectExample';
 import SummaryExample from './examples/SummaryExample';
+import MarketPriceExample from './examples/MarketPriceExample';
 
 const App = () => (
   <>
@@ -11,6 +12,9 @@ const App = () => (
       <ModalExample />
       <SelectExample />
       <SummaryExample />
+    </div>
+    <div style={{ maxWidth: 500 }}>
+      <MarketPriceExample />
     </div>
   </>
 );
