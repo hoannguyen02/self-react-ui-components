@@ -25,7 +25,7 @@ const ModalExample = () => {
         <Button className="default" onClick={handleOpen} title="Open Modal" disabled={open} />
         {loading && <CircularProgress />}
       </div>
-      <Button className="primary" onClick={toggleLoading} title="Toggle loading to button" />
+      <Button className="primary" onClick={toggleLoading} title="Toggle loading" />
       <Modal open={open} title="Modal Example" onClose={handleClose} />
     </>
   );
