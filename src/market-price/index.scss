@@ -1,0 +1,22 @@
+.market-price {
+  border: 1px solid #e2e2e2;
+  text-align: center;
+  img {
+    width: 100%;
+    border-bottom: 2px solid #e2e2e2;
+    max-height: 200px;
+  }
+
+  p {
+    background-color: rgb(253, 253, 253);
+    margin: 10px 0 0;
+  }
+
+  span {
+    display: block;
+    color: rgb(21, 146, 252);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 15px 0;
+  }
+}
