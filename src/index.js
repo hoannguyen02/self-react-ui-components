@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.scss';
 import ModalExample from './examples/ModalExample';
 import SelectExample from './examples/SelectExample';
 import SelectorExample from './examples/SelectorExample';
