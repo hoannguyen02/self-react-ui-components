@@ -1,6 +1,4 @@
 import React from 'react';
-import './CaretDown.scss';
-import './icon.scss';
 
 const CaretDown = (props) => {
   const { className, fill, opacity, focusable } = props;

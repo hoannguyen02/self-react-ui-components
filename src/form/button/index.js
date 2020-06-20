@@ -2,15 +2,17 @@ import React from 'react';
 import './index.scss';
 
 const Button = (props) => {
-  const { title, type, disabled, className, onClick } = props;
+  const { title, type, disabled, className, onClick, style, svgIcon } = props;
   return (
     <button
-      className={`button ${className ? className : ''}`}
+      className={`button ${className ? className : ''} ${svgIcon ? 'svg-icon' : ''}`}
+      style={style}
       type={type | 'button'}
       disabled={disabled}
       onClick={onClick}
     >
-      {title}
+      {svgIcon}
+      <span>{title}</span>
     </button>
   );
 };

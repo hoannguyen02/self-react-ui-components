@@ -20,4 +20,9 @@
     border: 1px solid #3074c8;
     background-color: #3074c8;
   }
+  &.svg-icon {
+    svg {
+      margin-right: 8px;
+    }
+  }
 }

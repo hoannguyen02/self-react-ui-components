@@ -6,11 +6,13 @@ import SelectExample from './examples/SelectExample';
 import SelectorExample from './examples/SelectorExample';
 import SummaryExample from './examples/SummaryExample';
 import MarketPriceExample from './examples/MarketPriceExample';
+import ButtonWithSVGExample from './examples/ButtonWithSVGExample';
 
 const App = () => (
   <>
     <h2 style={{ textAlign: 'center' }}>Welcome to Efficient UI</h2>
     <div style={{ maxWidth: 200 }}>
+      <ButtonWithSVGExample />
       <ModalExample />
       <SelectExample />
       <SelectorExample />
