@@ -1,31 +1,23 @@
-button.default {
+.button {
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 0.5px solid #808080;
+  border-radius: 4px;
   font-weight: 700;
-  font-size: 16px;
-  margin: 0;
-  width: auto;
-  height: 42px;
-  -webkit-appearance: none;
-  cursor: pointer;
-  min-width: 100px;
-  padding: 0 12px;
-  border-radius: 3px;
-  font-size: 19px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+  opacity: 0.8;
   outline: none;
-  max-width: 100%;
-  user-select: none;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #e0e0e0;
-  border: 1px solid #e0e0e0;
-}
-
-button.primary {
-  color: #fafafa;
-  border: 1px solid #2b72cb;
-  background-color: #2d89d1;
-}
-
-button.secondary {
-  color: rgba(0, 0, 0, 0.87);
-  border: 1px solid #f48fb1;
-  background-color: #f48fb1;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.6;
+  }
+  &.primary {
+    color: #fff;
+    border: 1px solid #3074c8;
+    background-color: #3074c8;
+  }
 }
