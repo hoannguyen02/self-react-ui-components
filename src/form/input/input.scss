@@ -1,0 +1,28 @@
+.input {
+  input {
+    outline: none;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    opacity: 0.5;
+    background: #ffffff;
+    border: 0.5px solid #808080;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 9px 16px;
+    width: 100%;
+    &.selected {
+      border: 0.5px solid #3074c8;
+    }
+  }
+
+  label {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 4px;
+  }
+}
