@@ -27,7 +27,7 @@ module.exports = {
         },
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(c|sc|sa)ss$/i,
         exclude: /node_modules/,
         use: [
           // Creates `style` nodes from JS strings
@@ -45,7 +45,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-proposal-object-rest-spread'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/plugin-proposal-class-properties']
           },
         },
       },
