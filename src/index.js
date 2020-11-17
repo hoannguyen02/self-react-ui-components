@@ -9,12 +9,14 @@ import MarketPriceExample from './examples/MarketPriceExample';
 import ButtonWithSVGExample from './examples/ButtonWithSVGExample';
 import InputExample from './examples/InputExample';
 import AccordionExample from './examples/AccordionExample';
+import DropdownExample from './examples/DropdownExample';
 
 const App = () => (
   <>
     <h2 style={{ textAlign: 'center' }}>Welcome to Efficient UI</h2>
     <AccordionExample />
     <div style={{ maxWidth: 200 }}>
+      <DropdownExample />
       <InputExample />
       <ButtonWithSVGExample />
       <ModalExample />

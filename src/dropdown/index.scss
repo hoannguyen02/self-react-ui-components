@@ -1,0 +1,136 @@
+@mixin makerLabel {
+  font-size: 12px;
+  line-height: 14px;
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+  color: #000000;
+  display: block;
+  margin-bottom: 4px;
+  @media (min-width: 1025px) {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
+  }
+}
+
+@mixin makerInput {
+  outline: none;
+  font-size: 14px;
+  line-height: 17px;
+  color: #808080;
+  letter-spacing: 0.04em;
+  background: #ffffff;
+  border: 0.5px solid #808080;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+  font: unset;
+  text-align: left;
+  padding: 0 16px;
+  height: 40px;
+  &:disabled {
+    color: #d9d9d9;
+    border: 0.5px solid #d9d9d9;
+  }
+  &.selected,
+  &.primary {
+    border: 2px solid #3074c8;
+    font-weight: 500;
+    color: #000;
+  }
+
+  @media (min-width: 1025px) {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    height: 34px;
+    &.selected,
+    &.primary {
+      border: 1.5px solid #3074c8;
+    }
+  }
+}
+
+.cpc-selector {
+  position: relative;
+  margin-bottom: 20px;
+
+  &.cpc-col-6,
+  &.cpc-col-desktop-6:not(.cpc-col-mobile-12) {
+    ul {
+      left: 7.5px;
+      width: calc(100% - 7.5px);
+      @media (min-width: 1140px) {
+        left: 17px;
+        width: calc(100% - 34px);
+      }
+    }
+  }
+
+  label {
+    @include makerLabel();
+  }
+
+  button {
+    @include makerInput();
+    position: relative;
+    z-index: 1;
+    &.selected {
+      .caret-down {
+        top: 14px;
+        @media (min-width: 1025px) {
+          top: 11.5px;
+        }
+      }
+    }
+    .caret-down {
+      position: absolute;
+      right: 14px;
+      top: 15px;
+      pointer-events: none;
+      @media (min-width: 1025px) {
+        top: 12px;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    list-style-type: none;
+    max-height: 275px;
+    overflow-y: auto;
+  }
+
+  li {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    opacity: 0.5;
+    padding: 10px 16px;
+    cursor: pointer;
+    &.selected {
+      background: rgba(48, 116, 200, 0.1);
+    }
+    &:hover,
+    &.hover {
+      background: rgba(48, 116, 200, 0.5);
+    }
+  }
+}
+.cpc-selector.cpc-col-desktop-6 {
+  ul {
+    @media (min-width: 1140px) {
+      width: auto;
+      left: 17px;
+      right: 17px;
+    }
+  }
+}
