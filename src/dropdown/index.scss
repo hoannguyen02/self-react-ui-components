@@ -1,73 +1,45 @@
 @mixin makerLabel {
   font-size: 12px;
-  line-height: 14px;
-  opacity: 0.6;
-  letter-spacing: 0.04em;
-  color: #000000;
-  display: block;
-  margin-bottom: 4px;
-  @media (min-width: 1025px) {
-    font-size: 11px;
-    line-height: 13px;
-    font-weight: 400;
-  }
+  line-height: 120%;
+  color: #1a1a1a;
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
 }
 
 @mixin makerInput {
   outline: none;
-  font-size: 14px;
-  line-height: 17px;
-  color: #808080;
-  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
   background: #ffffff;
   border: 0.5px solid #808080;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 100%;
+  width: 50%;
+  vertical-align: middle;
   font-family: 'Helvetica Neue', sans-serif;
-  font: unset;
   text-align: left;
-  padding: 0 16px;
-  height: 40px;
+  padding: 0 12px;
+  height: 34px;
   &:disabled {
     color: #d9d9d9;
     border: 0.5px solid #d9d9d9;
   }
   &.selected,
   &.primary {
-    border: 2px solid #3074c8;
+    border: 1.5px solid #3074c8;
     font-weight: 500;
     color: #000;
   }
-
-  @media (min-width: 1025px) {
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 13px;
-    height: 34px;
-    &.selected,
-    &.primary {
-      border: 1.5px solid #3074c8;
-    }
-  }
 }
 
-.cpc-selector {
+.dropdown {
   position: relative;
-  margin-bottom: 20px;
-
-  &.cpc-col-6,
-  &.cpc-col-desktop-6:not(.cpc-col-mobile-12) {
-    ul {
-      left: 7.5px;
-      width: calc(100% - 7.5px);
-      @media (min-width: 1140px) {
-        left: 17px;
-        width: calc(100% - 34px);
-      }
-    }
-  }
-
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
   label {
     @include makerLabel();
   }
@@ -78,20 +50,14 @@
     z-index: 1;
     &.selected {
       .caret-down {
-        top: 14px;
-        @media (min-width: 1025px) {
-          top: 11.5px;
-        }
+        top: 12px;
       }
     }
     .caret-down {
       position: absolute;
       right: 14px;
-      top: 15px;
+      top: 12px;
       pointer-events: none;
-      @media (min-width: 1025px) {
-        top: 12px;
-      }
     }
   }
 
@@ -101,8 +67,9 @@
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     position: absolute;
-    width: 100%;
+    width: 50%;
     z-index: 2;
+    right: 0;
     background: #fff;
     list-style-type: none;
     max-height: 275px;
@@ -122,15 +89,6 @@
     &:hover,
     &.hover {
       background: rgba(48, 116, 200, 0.5);
-    }
-  }
-}
-.cpc-selector.cpc-col-desktop-6 {
-  ul {
-    @media (min-width: 1140px) {
-      width: auto;
-      left: 17px;
-      right: 17px;
     }
   }
 }

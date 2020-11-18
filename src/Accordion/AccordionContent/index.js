@@ -1,6 +1,7 @@
 import DateFormat from './DateFormat';
 import Frequencies from './Frequencies';
 import Statuses from './Statuses';
+import './index.scss';
 
 import React from 'react';
 

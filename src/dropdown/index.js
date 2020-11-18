@@ -147,9 +147,7 @@ export default class Dropdown extends React.Component {
 
     return (
       <div
-        className={`cpc-selector ${classNames ? classNames : ''}${
-          disabled || !isValidItems ? ' disable-component' : ''
-        }`}
+        className={`dropdown ${classNames ? classNames : ''}${disabled || !isValidItems ? ' disable-component' : ''}`}
         style={style}
       >
         {label && <label>{label}</label>}
